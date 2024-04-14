@@ -23,17 +23,17 @@ export const signup = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, salt);
 
     // Profile picture
-    const boyProfilePic = `https://avatar.iran.liara.run/public/boy?username=${username}`;
-    const girlProfilePic = `https://avatar.iran.liara.run/public/girl?username=${username}`;
-    // const boyProfilePic = `https://xsgames.co/randomusers/avatar.php?g=male`;
-    // const girlProfilePic = `https://xsgames.co/randomusers/avatar.php?g=female`;
 
+    // Fetch the profile picture URL based on gender
+    const profilePicURL = await fetchProfilePic(gender);
+
+    // Create the new user object with the fetched profile picture URL
     const newUser = new User({
       fullName,
       username,
       password: hashedPassword,
       gender,
-      profilePic: gender === "male" ? boyProfilePic : girlProfilePic,
+      profilePic: profilePicURL,
     });
 
     if (newUser) {
@@ -90,5 +90,24 @@ export const logout = (req, res) => {
   } catch (error) {
     console.log("Error in logout controller", error.message);
     res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
+const fetchProfilePic = async (gender) => {
+  try {
+    // Define the base URL of the RandomUser.me API
+    const baseURL = "https://randomuser.me/api/";
+
+    // Construct the URL with the gender parameter
+    const url = `${baseURL}?gender=${gender}`;
+
+    // Make a GET request to the API
+    const response = await fetch(url);
+    const data = await response.json();
+
+    return data.results[0].picture.thumbnail;
+  } catch (error) {
+    console.error("Error fetching profile picture:", error.message);
+    throw error;
   }
 };
