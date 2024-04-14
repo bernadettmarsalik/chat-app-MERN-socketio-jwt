@@ -2,9 +2,11 @@ import { useEffect, useRef } from "react";
 import MessageSkeleton from "../../assets/MessageSkeleton";
 import useGetMessages from "../../hooks/useGetMessages";
 import Message from "./Message";
+import useListenMessages from "../../hooks/useListenMessages";
 
 const Messages = () => {
   const { messages, loading } = useGetMessages();
+  useListenMessages(); //listening from incoming messages from websocket
   // console.log("messages: ", messages);
   const lastMessageRef = useRef();
   useEffect(() => {
