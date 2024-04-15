@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaSearch } from "react-icons/fa";
+import { CiSearch } from "react-icons/ci";
 import useConversation from "../../store/useConversation";
 import useGetConversations from "../../hooks/useGetConversations";
 import toast from "react-hot-toast";
@@ -25,39 +25,19 @@ const SearchInput = () => {
     }
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="flex items-center justify-center">
       <input
         type="text"
-        placeholder="Search..."
-        className="input input-bordered rounded-full"
+        placeholder="Search user..."
+        className="input input-bordered rounded-full mr-1"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-      <button type="submit" className="btn btn-circle bg-teal-500 ">
-        <FaSearch className="w-6 h-6 outline-none" />
+      <button type="submit" className="btn btn-circle  ">
+        <CiSearch className="w-6 h-6 " />
       </button>
     </form>
   );
 };
 
 export default SearchInput;
-
-// STARTER
-// import { FaSearch } from "react-icons/fa";
-
-// const SearchInput = () => {
-//   return (
-//     <form>
-//       <input
-//         type="text"
-//         placeholder="Search..."
-//         className="input input-bordered rounded-full"
-//       />
-//       <button type="submit" className="btn btn-circle bg-teal-500 text-white">
-//         <FaSearch className="w-6 h-6 outline-none" />
-//       </button>
-//     </form>
-//   );
-// };
-
-// export default SearchInput;

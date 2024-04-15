@@ -2,12 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+*,
+html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 /* Scrollbar */
@@ -16,14 +15,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #555;
+  background: #9292927c;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #121212;
+  background: #7b7b7bbf;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #242424;
+  background: #9292927c;
 }

@@ -16,10 +16,12 @@ const Message = ({ message }) => {
     <div className={`chat ${chatClassName}`}>
       <div className="chat-image avatar">
         <div className="w-10 rounded-full">
-          <img alt="Tailwind CSS chat bubble component" src={profilePic} />
+          <img alt="chat message" src={profilePic} />
         </div>
       </div>{" "}
-      <div className={`chat-bubble ${bubbleBgColor}`}>{message.message}</div>
+      <div className={`chat-bubble text-white ${bubbleBgColor}`}>
+        {message.message}
+      </div>
       <div className="chat-footer opacity-50">
         {" "}
         Sent {formatTimestamp(message.createdAt)}

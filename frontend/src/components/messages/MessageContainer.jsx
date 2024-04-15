@@ -4,9 +4,13 @@ import MessageInput from "./MessageInput";
 import Messages from "./Messages";
 import { IoMdChatboxes } from "react-icons/io";
 import { useAuthContext } from "../../context/AuthContext";
+import { useSocketContext } from "../../context/SocketContext";
 
 const MessageContainer = () => {
   const { selectedConversation, setSelectedConversation } = useConversation();
+  const { onlineUsers } = useSocketContext();
+  const isOnline =
+    selectedConversation && onlineUsers.includes(selectedConversation._id);
 
   // useEffect to set selected conv to null when logout when component unmounts
   useEffect(() => {
@@ -16,15 +20,29 @@ const MessageContainer = () => {
   }, []);
 
   return (
-    <div className="md:min-w-[450px] flex flex-col">
+    <div className="md:min-w-[500px] md:max-w-[500px]  flex flex-col bg-slate-50">
       {!selectedConversation ? (
         <NoChatSelected />
       ) : (
         <>
           {/* HEADER */}
-          <div className="bg-slate-500 px-4 py-2 mb-2">
+          <div className="bg-slate-200 px-4 py-2 mb-2 flex flex-row justify-start items-center gap-3">
             <span className="label-text">To:</span>
-            <span className="font-bold">{selectedConversation.fullName}</span>
+            <div className={`avatar ${isOnline ? "online" : "offline"}`}>
+              <div className="w-12 rounded-full">
+                <img
+                  src={selectedConversation.profilePic}
+                  alt="user profile picture"
+                />
+              </div>
+            </div>
+            <div>
+              <div>
+                <p className="font-semibold ">
+                  {selectedConversation.fullName}
+                </p>
+              </div>
+            </div>{" "}
           </div>
 
           {/* Messages */}
