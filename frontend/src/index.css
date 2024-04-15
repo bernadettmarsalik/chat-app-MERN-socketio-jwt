@@ -26,3 +26,10 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #9292927c;
 }
+
+.bg-img {
+  background-image: url(assets/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

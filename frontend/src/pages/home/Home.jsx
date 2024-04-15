@@ -22,31 +22,31 @@ function Home() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row w-screen h-auto md:min-h-[600px] md:max-h-[700px] justify-center rounded-lg">
+    <div className="flex flex-col md:flex-row sm:min-w-[300px] h-[700px] justify-center rounded-lg border-4 border-slate-200">
       {/* Sidebar button */}
-      <div className="sticky top-0 bg-slate-300 z-10">
+      <div className="z-10 sm:max-w-screen bg-slate-200 ">
         {isSidebarOpen ? (
           // Close sidebar button
-          <button className="p-4" onClick={toggleSidebar}>
-            <FiX size={24} />
-          </button>
+          <div className="mt-auto tooltip" data-tip="Hide users">
+            <button className="p-4" onClick={toggleSidebar}>
+              <FiX size={24} />
+            </button>{" "}
+          </div>
         ) : (
           // Open sidebar button
-          <button className="p-4" onClick={toggleSidebar}>
-            <FiMenu size={24} />
-          </button>
+          <div className="mt-auto tooltip" data-tip="Show users">
+            <button className="p-4" onClick={toggleSidebar}>
+              <FiMenu size={24} />
+            </button>{" "}
+          </div>
         )}
       </div>
       {/* Sidebar */}
-      <div
-        className={`${isSidebarOpen ? "flex" : "hidden"} sticky top-0  z-10`}
-      >
-        <Sidebar />
+      <div className={`${isSidebarOpen ? "flex" : "hidden"} flex-col h-full `}>
+        <Sidebar className="flex flex-col" />
       </div>
       {/* Message Container */}
-      <div className="flex">
-        <MessageContainer />
-      </div>
+      <MessageContainer className="flex flex-col" />
     </div>
   );
 }

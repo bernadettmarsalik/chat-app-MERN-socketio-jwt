@@ -28,11 +28,11 @@ const SignUp = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-w-96 mx-auto">
-      <div className="w-full p-6 rounded-lg shadow-md bg-white bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10">
-        <h1 className="text-3xl font-semibold text-center text-gray-500">
+    <div className="flex flex-col items-center justify-center min-w-96 mx-auto bg-img w-[800px] h-[800px]">
+      <div className="w-[400px] p-8 rounded-box shadow-md glass bg-white bg-opacity-50">
+        <h1 className="text-4xl font-semibold text-center text-gray-800 mb-2">
           Sign Up
-          <span className="text-teal-500 mx-2">ChatApp</span>
+          <span className="text-teal-500 mx-2">Chirip Chat</span>
         </h1>
         <form onSubmit={handleSubmit}>
           <div>
