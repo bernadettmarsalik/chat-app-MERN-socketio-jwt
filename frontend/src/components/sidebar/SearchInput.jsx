@@ -25,15 +25,18 @@ const SearchInput = () => {
     }
   };
   return (
-    <form onSubmit={handleSubmit} className="flex items-center justify-center">
+    <form
+      onSubmit={handleSubmit}
+      className="flex lg:gap-2 items-center justify-center px-5"
+    >
       <input
         type="text"
         placeholder="Search user..."
-        className="input input-bordered rounded-full mr-1"
+        className="input-sm input-bordered  rounded-full"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-      <button type="submit" className="btn btn-circle  ">
+      <button type="submit" className="btn btn-sm btn-circle">
         <CiSearch className="w-6 h-6 " />
       </button>
     </form>

@@ -13,7 +13,7 @@ const Messages = () => {
     lastMessageRef.current?.scrollIntoView({ behavior: "smooth" });
   });
   return (
-    <div className="px-4 flex-1 overflow-auto">
+    <div className="px-4 flex-1 overflow-x-hidden w-full">
       {!loading &&
         messages.length > 0 &&
         messages.map((message) => (

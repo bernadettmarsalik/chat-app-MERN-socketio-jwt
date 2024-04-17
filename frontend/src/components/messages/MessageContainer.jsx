@@ -26,7 +26,7 @@ const MessageContainer = () => {
       ) : (
         <>
           {/* HEADER */}
-          <div className="bg-base-100 px-4 py-2 mb-2 flex flex-row justify-start items-center gap-3 border-b-2 border-teal-700">
+          <div className="w-full bg-base-100 px-4 py-2 mb-2 flex flex-row justify-start items-center gap-3 border-b-2 border-teal-700 ">
             <span className="label-text">To:</span>
             <div className={`avatar ${isOnline ? "online" : "offline"}`}>
               <div className="w-12 rounded-full">
@@ -59,7 +59,7 @@ export default MessageContainer;
 const NoChatSelected = () => {
   const { authUser } = useAuthContext();
   return (
-    <div className="flex items-center justify-center w-full h-full ">
+    <div className="flex items-center justify-center w-full h-full">
       <div className="p-4 text-center sm:text-lg md:text-xl font-semibold flex flex-col items-center gap-2 overflow-hidden">
         <p>Welcome {authUser.fullName} 👋</p>
         <p>Select a chat to start messaging</p>
