@@ -33,12 +33,12 @@ function Home() {
         <div
           className={`${
             isSidebarOpen ? "flex" : "hidden"
-          } flex-col w-screen md:w-1/3  `}
+          } flex-col w-screen  h-1/3 sm:h-full md:w-1/2 overflow-y-auto overflow-x-hidden `}
         >
-          <Sidebar className="flex flex-col " />
+          <Sidebar className="flex flex-col" />
         </div>
         {/* Message Container */}
-        <MessageContainer />
+        <MessageContainer className={isSidebarOpen ? "w-full" : ""} />
       </div>
     </>
   );
