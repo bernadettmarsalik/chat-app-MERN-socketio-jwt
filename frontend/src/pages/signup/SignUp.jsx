@@ -29,15 +29,15 @@ const SignUp = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-w-96 mx-auto bg-img w-[800px] h-[800px]">
-      <div className="w-[400px] p-8 rounded-box shadow-md glass bg-white bg-opacity-50">
+      <div className="w-[400px] p-8 rounded-box shadow-md glass bg-base bg-opacity-50">
         <h1 className="text-4xl font-semibold text-center text-gray-800 mb-2">
           Sign Up
-          <span className="text-teal-500 mx-2">Chirip Chat</span>
+          <span className="text-teal-300 mx-2">Chirip Chat</span>
         </h1>
         <form onSubmit={handleSubmit}>
           <div>
             <label className="label p-2">
-              <span className="text-base labe-text">Full Name</span>
+              <span className="text-gray-800 labe-text">Full Name</span>
             </label>
             <input
               type="text"
@@ -51,7 +51,7 @@ const SignUp = () => {
           </div>
           <div>
             <label className="label p-2">
-              <span className="text-base labe-text">Username</span>
+              <span className="text-gray-800 labe-text">Username</span>
             </label>
             <input
               type="text"
@@ -65,7 +65,7 @@ const SignUp = () => {
           </div>
           <div>
             <label className="label p-2">
-              <span className="text-base labe-text">Password</span>
+              <span className="text-gray-800 labe-text">Password</span>
             </label>
             <input
               type="password"
@@ -79,7 +79,7 @@ const SignUp = () => {
           </div>
           <div>
             <label className="label p-2">
-              <span className="text-base labe-text">Confirm Password</span>
+              <span className="text-gray-800 labe-text">Confirm Password</span>
             </label>
             <input
               type="password"
@@ -97,7 +97,7 @@ const SignUp = () => {
           />
           <div>
             <button
-              className="btn btn-primary btn-block btn-sm mt-3"
+              className="btn btn-accent btn-block btn-sm mt-3"
               disabled={loading}
             >
               {loading ? (
@@ -109,7 +109,7 @@ const SignUp = () => {
           </div>
           <Link
             to={"/login"}
-            className="text-sm hover:underline hover:text-teal-600 mt-2 inline-block"
+            className="text-sm link link-neutral hover:text-teal-400 mt-2 inline-block"
           >
             Already have an account?
           </Link>

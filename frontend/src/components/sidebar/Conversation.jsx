@@ -1,5 +1,5 @@
 import { useSocketContext } from "../../context/SocketContext";
-import useConversation from "../../store/useConversation";
+import useConversation from "../../hooks/useConversation";
 
 const Conversation = ({ conversation }) => {
   const { selectedConversation, setSelectedConversation } = useConversation();
@@ -10,7 +10,7 @@ const Conversation = ({ conversation }) => {
   return (
     <>
       <div
-        className={`flex gap-2 items-center hover:bg-teal-500 rounded p-2 py-1 cursor-pointer ${
+        className={`flex gap-2 items-center hover:bg-teal-500 rounded p-2 py-1 cursor-pointer text-base ${
           isSelected ? "bg-teal-500" : ""
         }`}
         onClick={() => setSelectedConversation(conversation)}

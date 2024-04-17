@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
-import useConversation from "../../store/useConversation";
+import useConversation from "../../hooks/useConversation";
 import useGetConversations from "../../hooks/useGetConversations";
 import toast from "react-hot-toast";
 

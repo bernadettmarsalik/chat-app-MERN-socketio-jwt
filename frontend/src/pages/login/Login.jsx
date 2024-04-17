@@ -15,15 +15,15 @@ const Login = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-w-96 mx-auto bg-img w-[800px] h-[800px]">
-      <div className="w-[350px] p-8 rounded-box shadow-md glass bg-white bg-opacity-50">
+      <div className="w-[350px] p-8 rounded-box shadow-md glass bg-base bg-opacity-50">
         <h1 className="text-4xl font-semibold text-center text-gray-800 mb-2">
           Login
-          <span className="text-teal-500 mx-2">Chirip</span>
+          <span className="text-teal-300 mx-2">Chirip</span>
         </h1>
         <form onSubmit={handleSubmit}>
           <div>
             <label className="label p-2">
-              <span className="text-base labe-text">Username</span>
+              <span className="text-gray-800 label-text">Username</span>
             </label>
             <input
               type="text"
@@ -35,10 +35,10 @@ const Login = () => {
           </div>
           <div>
             <label className="label p-2">
-              <span className="text-base labe-text">Password</span>
+              <span className="text-gray-800 label-text">Password</span>
             </label>
             <input
-              type="text"
+              type="password"
               placeholder="Enter password"
               className="w-full input input-bordered h-10"
               value={password}
@@ -47,7 +47,7 @@ const Login = () => {
           </div>
           <div>
             <button
-              className="btn btn-primary btn-block btn-sm mt-3"
+              className="btn btn-accent btn-block btn-sm mt-3"
               disabled={loading}
             >
               {loading ? (
@@ -59,7 +59,7 @@ const Login = () => {
           </div>
           <Link
             to={"/signup"}
-            className="text-sm hover:underline hover:text-teal-600 mt-2 inline-block"
+            className="text-sm link link-neutral hover:text-teal-400 mt-2 inline-block"
           >
             {"Don't"} have an account?
           </Link>

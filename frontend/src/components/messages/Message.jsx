@@ -1,4 +1,4 @@
-import useConversation from "../../store/useConversation";
+import useConversation from "../../hooks/useConversation";
 import { useAuthContext } from "../../context/AuthContext";
 import formatTimestamp from "../../assets/formatTimeStamp";
 

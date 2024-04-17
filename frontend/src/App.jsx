@@ -5,13 +5,17 @@ import Login from "./pages/login/Login";
 import SignUp from "./pages/signup/SignUp";
 import { Toaster } from "react-hot-toast";
 import { useAuthContext } from "./context/AuthContext";
+import Themes from "./pages/theme/Themes";
 
 function App() {
   const { authUser } = useAuthContext();
 
   return (
     <>
-      <div className="p-4 h-screen flex items-center justify-center">
+      <div className="flex justify-center pt-10 mb-1 mx-auto">
+        <Themes />
+      </div>
+      <div className="mt-3 p-4 h-screen w-screen md:flex flex-column md:flex-row items-start justify-center">
         <Routes>
           {/* if user is logged in navigate to home page if not then login page */}
           <Route
