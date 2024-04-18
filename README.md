@@ -1,11 +1,12 @@
 # CHIRIP CHAT APP
 
-This is a chat application called Chirip. It is developed to be simple yet stylish.
+This is a real-time chat application called Chirip. It is developed to be simple yet stylish.
 Registered users can chat with each other, they can also search users. 
 Since it is at the moment is only for presenting my project, user's pictures are generated with an API. 
 Libraries, frameworks I used:
 -NodeJS
 -Express JS
+-Socket.io
 -React/Vite
 -Tailwind CSS / Daisy UI
 -Render for deployment
