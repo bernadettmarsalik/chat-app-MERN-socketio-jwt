@@ -28,11 +28,11 @@ const SignUp = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-w-96 mx-auto bg-img w-[800px] h-[800px]">
-      <div className="w-[400px] p-8 rounded-box shadow-md glass bg-base bg-opacity-50">
+    <div className="w-screen h-screen flex flex-col items-center justify-center mx-auto bg-img">
+      <div className="w-10/12 md:w-6/12 lg:w-3/12 p-8 rounded-box shadow-md glass bg-base bg-opacity-50">
         <h1 className="text-4xl font-semibold text-center text-gray-800 mb-2">
           Sign Up
-          <span className="text-teal-300 mx-2">Chirip Chat</span>
+          <span className="text-teal-300 mx-2">Chirip</span>
         </h1>
         <form onSubmit={handleSubmit}>
           <div>
