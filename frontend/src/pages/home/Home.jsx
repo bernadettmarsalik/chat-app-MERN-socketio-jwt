@@ -28,7 +28,7 @@ function Home() {
           toggleSidebar={toggleSidebar}
         />
       </div>
-      <div className="flex flex-col h-4/5 w-screen md:flex-row md:w-5/6 lg:w-6/12 justify-center md:rounded-box md:border-4 md:border-base-100">
+      <div className="flex flex-col md:h-4/5 w-screen md:flex-row md:w-5/6 lg:w-6/12 justify-center md:rounded-box md:border-4 md:border-base-100 shadow-lg">
         {/* Sidebar */}
         <div
           className={`${

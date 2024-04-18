@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <div className="flex justify-center pt-5 mb-1 mx-auto">
+      <div className="flex justify-center pt-5 mb-5 mx-auto">
         <Themes />
       </div>
       <div className="h-screen w-screen md:flex flex-column md:flex-row items-start justify-center">
