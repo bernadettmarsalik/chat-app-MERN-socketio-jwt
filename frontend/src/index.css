@@ -31,10 +31,10 @@ html {
   background-image: url(assets/bg.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: 50%;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1200px) {
   .bg-img {
     background-size: cover;
   }

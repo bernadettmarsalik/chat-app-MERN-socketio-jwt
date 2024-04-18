@@ -12,10 +12,10 @@ function App() {
 
   return (
     <>
-      <div className="flex justify-center pt-10 mb-1 mx-auto">
+      <div className="flex justify-center pt-5 mb-1 mx-auto">
         <Themes />
       </div>
-      <div className="mt-3 p-4 h-screen w-screen md:flex flex-column md:flex-row items-start justify-center">
+      <div className="h-screen w-screen md:flex flex-column md:flex-row items-start justify-center">
         <Routes>
           {/* if user is logged in navigate to home page if not then login page */}
           <Route

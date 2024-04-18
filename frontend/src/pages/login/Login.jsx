@@ -15,7 +15,7 @@ const Login = () => {
 
   return (
     <div className="w-screen h-screen flex flex-col items-center justify-center mx-auto bg-img">
-      <div className="w-10/12 md:w-6/12 lg:w-3/12 p-8 rounded-box shadow-md glass bg-base bg-opacity-50">
+      <div className="w-4/5 md:w-3/5 lg:w-1/5 p-8 rounded-box shadow-md glass bg-base bg-opacity-50">
         <h1 className="text-4xl font-semibold text-center text-gray-800 mb-2">
           Login
           <span className="text-teal-300 mx-2">Chirip</span>
