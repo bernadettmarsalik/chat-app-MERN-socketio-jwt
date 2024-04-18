@@ -13,7 +13,7 @@ Libraries, frameworks I used:
 
 ## Installation
 
-Use the package manager npm i to install dependencies.
+Use the package manager npm to install dependencies.
 
 ```npm i```
 
