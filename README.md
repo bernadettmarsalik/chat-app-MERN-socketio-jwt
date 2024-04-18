@@ -15,7 +15,7 @@ Libraries, frameworks I used:
 
 Use the package manager npm i to install dependencies.
 
-```
+```bash
 npm i ```
 
 ## Usage in VSCode
@@ -35,7 +35,7 @@ to discuss what you would like to change.
 
 ## License
 
-This project was developed my [Me]([https://choosealicense.com/licenses/mit/](https://github.com/bernadettmarsalik/)) with :heart:
+This project was developed my [Me]([https://github.com/bernadettmarsalik/)]) with :heart:
 Background picture was generated with Microsoft Copilot.
-Sound Effect by [Universfield] ([https://pixabay.com/users/universfield-28281460/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=199277]) [Pixabay] ([https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=199277])
+Sound Effect by [Universfield] (https://pixabay.com/users/universfield-28281460/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=199277) [Pixabay] (https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=199277)
 
